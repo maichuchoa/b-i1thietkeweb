@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Mini Task Manager</h1>
+      <p>Bài kiểm tra thực hành HTML, CSS, JavaScript</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- FORM THÊM CÔNG VIỆC -->
+    <section class="form-section">
+      <h2>Thêm công việc</h2>
+      <form id="task-form">
+        <div class="form-group">
+          <label for="task-title">Tên công việc *</label>
+          <input type="text" id="task-title" placeholder="Nhập tên công việc..." required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="task-due">Hạn hoàn thành</label>
+            <input type="date" id="task-due">
+          </div>
+          <div class="form-group">
+            <label for="task-priority">Mức ưu tiên</label>
+            <select id="task-priority">
+              <option value="Cao">Cao</option>
+              <option value="Trung bình" selected>Trung bình</option>
+              <option value="Thấp">Thấp</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn-add">+ Thêm công việc</button>
+      </form>
+    </section>
+
+    <!-- TÌM KIẾM & LỌC -->
+    <section class="toolbar">
+      <input type="text" id="search-input" placeholder="🔍 Tìm kiếm theo tên...">
+      <select id="filter-status">
+        <option value="all">Tất cả trạng thái</option>
+        <option value="pending">Chưa hoàn thành</option>
+        <option value="done">Đã hoàn thành</option>
+      </select>
+    </section>
+
+    <!-- DANH SÁCH CÔNG VIỆC -->
+    <section class="task-list-section">
+      <ul id="task-list"></ul>
+      <p id="empty-msg" class="empty-msg hidden">Không có công việc nào!</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    Sinh viên: Nguyễn Thị Ngọc Mai  |  MSV:224001732 | Lớp: TUD D2024
+  </footer>
+</body>
+</html>
